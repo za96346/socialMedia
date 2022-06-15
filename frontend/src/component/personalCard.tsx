@@ -1,5 +1,5 @@
 import { personType } from "../type";
-const PersonalCard=({persons}:{persons:personType})=>{
+const PersonalCard=({persons}:{persons:personType}):JSX.Element=>{
     return(
         <div className="personal_index">
             
