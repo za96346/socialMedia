@@ -23,7 +23,7 @@ const PersonalCard=({persons}:{persons:personType}):JSX.Element=>{
                             <h3>{persons.Followers}<br/><span>Followers</span></h3>
                             <h3>{persons.Following}<br/><span>Following</span></h3>
                         </div>
-                        <div>
+                        <div style={{height:'40px'}}>
                             <button>Following</button>
                             <button>Message</button>
                         </div>

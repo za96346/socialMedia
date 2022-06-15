@@ -4,6 +4,5 @@ export function pressEnterEvent(e:React.KeyboardEvent):boolean{
     if(value==='Enter'||value==='enter'){
         result=true
     }
-    console.log(value)
     return result
 }

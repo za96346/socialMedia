@@ -14,6 +14,7 @@ div{
 }
 button{
   border-radius: 10px;
+  box-shadow:1px 1px 1px #0f0f0f;
   &:hover{
     cursor: pointer;
   }
@@ -95,7 +96,7 @@ ul{
 }
 
 .personal_index{
-  margin-top: 100px; 
+  margin-top: 15%;
   /* -45deg 也等於 top left 的效果 */
   position: relative;
 
@@ -140,6 +141,7 @@ ul{
             align-items: center;
             text-align: center;
             width: 100%;
+
               span{
                 color: gray;
                 font-size: small;
@@ -175,7 +177,7 @@ ul{
 .fix_title{
   position: fixed;
   top: 0px;
-  background-color: azure;
+  background-color:rgba(240,255,255,0);
   color: beige;
   border-radius: 0px!important;
   display: flex;
@@ -185,6 +187,7 @@ ul{
   width: 100%;
   height: 10%;
   z-index: 20;
+  
       &::before{
         content: '';
         background-image: url('./static/magnifier2.png');
@@ -192,20 +195,34 @@ ul{
         height: 30%;
         background-repeat: no-repeat;
         background-size: contain;
-        display: block;
+        
         position: absolute;
-        margin-left: 3%;
+        margin-left: 2.5%;
+        filter: brightness(100%);
         
       }
+
       input{
-        width: 40%;
-        height: 100%;
+        transition: 0.2s;
+        width: 20%;
+        height: 90%;
         background-color:rgba(255, 255, 255,0);
-        border: none;
+        border: 1px solid #f79eff;
         padding-left: 6%;
         border-radius: 20px;
-
-            
+        font-size: large;
+        &:focus{
+          border-radius: 0px;
+          width: 40%;
+          background-color:rgba(255, 255, 255,1);
+          
+          &::placeholder{
+            color: #0f0f0f;
+          }
+        }
+        &::placeholder{
+          color: #ffffff;
+        }
       }
       .img{
         background-image: url('./static/user.png');
@@ -220,7 +237,7 @@ ul{
               cursor: pointer;
             }
             >div{
-              background-color: #f7eeee;
+              
               position: absolute;
               border-radius: 10px;
               width: 300px;
@@ -229,24 +246,29 @@ ul{
               top:100%;
               right: 50%;
               margin: 0px;
-              color: #0f0f0f;
-                &:hover{
-                  @extend %boxshadow;
-                }
+              color: #000000;
+              @extend %boxshadow;      
                 div{
+              
                   width: inherit;
                   line-height: 200%; 
+                  
 
                       &:not(:last-child):hover{
                         border-radius: 10px!important;
-                        background-color: #ffffff;
-                        cursor: pointer;
-                        
+                        background-color: rgba(240,255,255,0.4);
+                        @extend %boxshadow;
+                        cursor: pointer;   
+                                           
                       }
                       &:last-child{
                         position: absolute;
-                        bottom: 0px;
+                        bottom: 10px;
                         text-align: center;
+                        
+                        
+                        display: flex;
+                        justify-content: space-evenly;
                             button{
                               @extend %button_pink;
                             }
@@ -254,23 +276,45 @@ ul{
                 }
             }
       }
-      >ul{
+      ul{
         margin: 0px;
-        width: 35%;
+        width: 46.5%;
+        padding-left: 0%;
         height: 300px;
+        max-height: 300px;
+        overflow-y: auto;
         background-color:rgba(247, 247, 247,0.5);
         transition: 1s;
         position: fixed;
         top: 10%;
-        left: 5%;
+        left: 0%;
+          div{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+              div{
+                /*鬧鐘圖案*/
+                background-position: center;
+                background-image: url('./static/clock3.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 14%;
+                background-color: rgba(240,255,255,0);
+              }
+              li{
+                line-height: 30px;
+                width: 86%;
+              }
+              &:hover{
+                
+                background-color: rgba(255, 255, 255, 0.4);
+                color: #0f0f0f;
+                cursor: pointer;
+                border-radius: 10px;
+              }
+          }
       }
-      li{
-        line-height: 30px;
-            &:hover{
-              background-color: rgba(255, 255, 255, 0.4);
-              color: #0f0f0f;
-              cursor: pointer;
-            }
-        
-      }
+
 }

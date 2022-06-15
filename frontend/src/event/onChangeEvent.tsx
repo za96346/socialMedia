@@ -1,15 +1,15 @@
-
-
-
-export function searchOnChange(e:React.ChangeEvent<HTMLInputElement>,pressEnter:boolean):string{
-    var value=e.target.value
-
+import { searchHistory } from "../session"
+import { setLocalSearchHistory } from "../session"
+export function searchOnChange(value:string,pressEnter:boolean):string{
     if(pressEnter===false){
+        //如果沒有按 enter就離開
         return ''
     }
-    var  searchHistory:Array<string>=JSON.parse(localStorage.getItem('searchHistory')||'')
-    searchHistory=[...searchHistory,value]
-    localStorage.setItem('searchHistory','')
-    
+    //如果有按enter 就把當前的input value 加入到searchHistory
+    var result=[...searchHistory,value]
+    //after set value into the searchHistory ,need to storage back to LocalStorage
+    //call setLocalSearchHistory
+    setLocalSearchHistory(result)
+    alert('')
     return ''
 }
