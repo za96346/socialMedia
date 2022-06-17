@@ -1,12 +1,12 @@
 import { personType } from "../type";
 const PersonalCard=({persons}:{persons:personType}):JSX.Element=>{
-    return(
-        <div className="personal_index">
-            
-            <div>
+    
+    return(      
+            <div className="personal_card">
+                <div>
                 {           /*image */                             }
                     <div>
-                        <img alt="user" src={require("../static/doggy.jpg")}></img>
+                        <img alt="user" src={persons.Pic}></img>
                     </div>
 
                     
@@ -14,9 +14,10 @@ const PersonalCard=({persons}:{persons:personType}):JSX.Element=>{
                     <div>
                         <div>
                             <h2>
-                                choco<br/>
-                                
+                                {persons.Name}<br/>
+                                <span>{persons.Descript}</span>
                             </h2>
+                            
                         </div>
                         <div>
                             <h3>{persons.Posts}<br/><span>Posts</span></h3>
@@ -28,9 +29,8 @@ const PersonalCard=({persons}:{persons:personType}):JSX.Element=>{
                             <button>Message</button>
                         </div>
                     </div>
-
+                </div>
             </div>
-        </div>
     )
 }
 export default PersonalCard;
