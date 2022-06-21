@@ -11,6 +11,6 @@ export function returnPage_signIn_signUp_MainPage(component:string,persons:Array
         return  <SignUp/>
     }
     else if(component==='signIn'){
-        return  <SignIn/>
+        return  <SignIn />
     }
 }

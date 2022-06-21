@@ -1,6 +1,6 @@
 import PersonalCard from "../component/personalCard";
 import { personType } from "../type";
-const MainPage=({persons}:{persons:Array<personType>}):JSX.Element=>{
+const MainPage=({persons}:{persons:personType []}):JSX.Element=>{
     return(
         <>
             <div className="main_page">

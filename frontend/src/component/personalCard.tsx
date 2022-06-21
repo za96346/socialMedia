@@ -1,7 +1,10 @@
 import { personType } from "../type";
+
+
+
 const PersonalCard=({persons}:{persons:personType}):JSX.Element=>{
     
-    return(      
+    return(
             <div className="personal_card">
                 <div>
                 {           /*image */                             }

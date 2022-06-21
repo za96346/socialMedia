@@ -6,7 +6,7 @@ import { pressEnterEvent } from "../event/onKeyDownEvent";
 import { localSearchHistory } from "../session";
 const PersonalIndex=():JSX.Element=>{
     
-    const [allPerson,setAllPerson]=useState<Array<personType>>([])
+    const [allPerson,setAllPerson]=useState<personType []>([])
     const [searchHistory,setSearHistory]=useState<arrStringType>([])
     const [ulStyle,setUlStyle]=useState<ulStyleType>({display:'none'})
     const [ulUserStyle,setUlUserStyle]=useState<ulStyleType>({display:'none'})

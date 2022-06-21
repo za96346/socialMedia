@@ -21,7 +21,7 @@ const Main=({component}:{component:string}):JSX.Element=>{
         Following:900,
         Pic:require('../static/dogbackground6.jpg')
     }
-    var persons:Array<personType>=[person1,person3]
+    var persons:personType []=[person1,person3]
     return(
         <>
             <div className="main_fix_title">
